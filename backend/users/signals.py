@@ -9,7 +9,7 @@ user =get_user_model()
 @receiver(post_save,sender=user)
 def create_user_profile(sender,instance,created,**kwargs):
     if created:
-        Profile.objects.create(seller =instance)
+        Profile.objects.create(seller = instance)
         
         
 @receiver(post_save,sender =user)
